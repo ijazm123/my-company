@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.gradient-primary {
+  background: linear-gradient(135deg, #0066cc 0%, #004a99 100%);
+}
+
+.gradient-secondary {
+  background: linear-gradient(135deg, #ff6b35 0%, #d94520 100%);
+}
