@@ -21,6 +21,9 @@ export default function Navigation() {
             <Link href="#features" className="text-gray-700 hover:text-blue-600 transition">
               Features
             </Link>
+            <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition">
+              Case Studies
+            </Link>
             <Link href="/about" className="text-gray-700 hover:text-blue-600 transition">
               About
             </Link>
@@ -50,6 +53,9 @@ export default function Navigation() {
             </Link>
             <Link href="#features" className="block text-gray-700 hover:text-blue-600">
               Features
+            </Link>
+            <Link href="/case-studies" className="block text-gray-700 hover:text-blue-600">
+              Case Studies
             </Link>
             <Link href="/about" className="block text-gray-700 hover:text-blue-600">
               About
