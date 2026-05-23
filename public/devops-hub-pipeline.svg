@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="primaryGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="successGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0.05"/>
+    </linearGradient>
+    <linearGradient id="failGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#ef4444;stop-opacity:0.05"/>
+    </linearGradient>
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow2">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="720" fill="url(#bgGrad2)"/>
+  <pattern id="grid2" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  </pattern>
+  <rect width="1200" height="720" fill="url(#grid2)"/>
+
+  <!-- Title -->
+  <text x="600" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#f1f5f9">CI/CD Pipeline — Jenkins with AI Security Gate</text>
+  <rect x="320" y="55" width="560" height="3" rx="2" fill="url(#primaryGrad2)"/>
+
+  <!-- Pipeline header bar -->
+  <rect x="40" y="75" width="1120" height="40" rx="10" fill="url(#cardGrad2)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="60" y="100" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#f1f5f9">CI Pipeline - Jenkins</text>
+  <text x="260" y="100" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">params: 7</text>
+  <rect x="1000" y="82" width="100" height="26" rx="6" fill="url(#primaryGrad2)" opacity="0.9"/>
+  <text x="1050" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff">Trigger</text>
+
+  <!-- ===== PIPELINE STAGES ===== -->
+
+  <!-- Stage 1: Checkout Code (SUCCESS) -->
+  <rect x="40" y="140" width="170" height="70" rx="12" fill="url(#cardGrad2)" stroke="#10b981" stroke-width="2" filter="url(#shadow2)"/>
+  <circle cx="70" cy="165" r="10" fill="#10b981" opacity="0.2"/>
+  <text x="70" y="169" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#10b981">📁</text>
+  <text x="135" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#f1f5f9">Checkout Code</text>
+  <circle cx="130" cy="195" r="8" fill="#10b981" opacity="0.3"/>
+  <text x="130" y="199" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#10b981">✓</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="210" y1="175" x2="250" y2="175" stroke="#10b981" stroke-width="2" stroke-dasharray="6,3" opacity="0.7"/>
+  <polygon points="247,170 257,175 247,180" fill="#10b981" opacity="0.7"/>
+
+  <!-- Stage 2: Build Docker Image (SUCCESS) -->
+  <rect x="260" y="140" width="185" height="70" rx="12" fill="url(#cardGrad2)" stroke="#10b981" stroke-width="2" filter="url(#shadow2)"/>
+  <circle cx="290" cy="165" r="10" fill="#10b981" opacity="0.2"/>
+  <text x="290" y="169" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#10b981">🐳</text>
+  <text x="362" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#f1f5f9">Build Docker Image</text>
+  <circle cx="355" cy="195" r="8" fill="#10b981" opacity="0.3"/>
+  <text x="355" y="199" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#10b981">✓</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="445" y1="175" x2="485" y2="175" stroke="#10b981" stroke-width="2" stroke-dasharray="6,3" opacity="0.7"/>
+  <polygon points="482,170 492,175 482,180" fill="#10b981" opacity="0.7"/>
+
+  <!-- Stage 3: Scan Image - Trivy (SUCCESS) -->
+  <rect x="495" y="140" width="175" height="70" rx="12" fill="url(#cardGrad2)" stroke="#10b981" stroke-width="2" filter="url(#shadow2)"/>
+  <circle cx="525" cy="165" r="10" fill="#10b981" opacity="0.2"/>
+  <text x="525" y="169" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#10b981">🛡</text>
+  <text x="592" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#f1f5f9">Scan Image (Trivy)</text>
+  <circle cx="585" cy="195" r="8" fill="#10b981" opacity="0.3"/>
+  <text x="585" y="199" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#10b981">✓</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="670" y1="175" x2="710" y2="175" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,3" opacity="0.7"/>
+  <polygon points="707,170 717,175 707,180" fill="#f59e0b" opacity="0.7"/>
+
+  <!-- Stage 4: AI Security Gate (FAILED - highlighted) -->
+  <rect x="720" y="132" width="195" height="85" rx="12" fill="rgba(239,68,68,0.08)" stroke="#ef4444" stroke-width="2.5" filter="url(#shadow2)"/>
+  <rect x="720" y="132" width="195" height="4" rx="2" fill="#ef4444"/>
+  <circle cx="750" cy="165" r="10" fill="#f59e0b" opacity="0.25"/>
+  <text x="750" y="169" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#f59e0b">🤖</text>
+  <text x="827" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#f59e0b">AI Security Gate</text>
+  <text x="827" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">(Gemini)</text>
+  <circle cx="820" cy="202" r="8" fill="#ef4444" opacity="0.4"/>
+  <text x="820" y="206" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ef4444">✕</text>
+
+  <!-- Arrow 4→5 -->
+  <line x1="915" y1="175" x2="955" y2="175" stroke="#ef4444" stroke-width="2" stroke-dasharray="6,3" opacity="0.5"/>
+  <polygon points="952,170 962,175 952,180" fill="#ef4444" opacity="0.5"/>
+
+  <!-- Stage 5: Push to Registry (BLOCKED) -->
+  <rect x="965" y="140" width="185" height="70" rx="12" fill="url(#cardGrad2)" stroke="#ef4444" stroke-width="2" filter="url(#shadow2)" opacity="0.6"/>
+  <circle cx="995" cy="165" r="10" fill="#7c3aed" opacity="0.15"/>
+  <text x="995" y="169" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7c3aed">📦</text>
+  <text x="1067" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#94a3b8">Push to Registry</text>
+  <circle cx="1060" cy="195" r="8" fill="#ef4444" opacity="0.4"/>
+  <text x="1060" y="199" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ef4444">✕</text>
+
+  <!-- ===== AI Security Gate Detail Panel (Right) ===== -->
+  <rect x="830" y="235" width="340" height="120" rx="12" fill="url(#cardGrad2)" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadow2)"/>
+  <rect x="830" y="235" width="340" height="3" rx="2" fill="#f59e0b"/>
+  <text x="855" y="260" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#f59e0b">AI Security Gate (Gemini)</text>
+  <rect x="1100" y="248" width="55" height="18" rx="4" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="1"/>
+  <text x="1127" y="261" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#ef4444">FAILED</text>
+
+  <circle cx="848" y="283" r="5" fill="#10b981"/>
+  <text x="860" y="287" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">Analyzing vulnerabilities...</text>
+
+  <circle cx="848" y="303" r="5" fill="#f59e0b"/>
+  <text x="860" y="307" font-family="Arial, sans-serif" font-size="10" fill="#f1f5f9">Found: 1 CRITICAL, 18 HIGH vulnerabilities</text>
+
+  <circle cx="848" y="323" r="5" fill="#ef4444"/>
+  <text x="860" y="327" font-family="Arial, sans-serif" font-size="10" fill="#ef4444">BLOCK — 1 CRITICAL vulnerabilities found</text>
+
+  <!-- Connecting line from Security Gate to detail panel -->
+  <line x1="827" y1="217" x2="1000" y2="235" stroke="#f59e0b" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+
+  <!-- ===== BUILD STATUS BADGES ===== -->
+  <rect x="40" y="235" width="130" height="30" rx="6" fill="rgba(239,68,68,0.12)" stroke="#ef4444" stroke-width="1"/>
+  <text x="105" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ef4444">BUILD FAILED</text>
+
+  <rect x="185" y="235" width="80" height="30" rx="6" fill="rgba(0,212,255,0.08)" stroke="#00d4ff" stroke-width="1"/>
+  <text x="225" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#00d4ff">CI #9</text>
+
+  <!-- ===== GEMINI AI DEBUG CHAT ===== -->
+  <rect x="40" y="290" width="760" height="400" rx="16" fill="url(#cardGrad2)" stroke="rgba(255,255,255,0.1)" stroke-width="1" filter="url(#shadow2)"/>
+  <rect x="40" y="290" width="760" height="4" rx="2" fill="url(#primaryGrad2)"/>
+
+  <!-- Chat header -->
+  <circle cx="70" cy="320" r="14" fill="rgba(0,212,255,0.15)"/>
+  <text x="70" y="324" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#00d4ff">🤖</text>
+  <text x="95" y="325" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#f1f5f9">Gemini AI Debug Chat</text>
+
+  <!-- ROOT CAUSE section -->
+  <text x="70" y="360" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#00d4ff">### 1. ROOT CAUSE</text>
+
+  <text x="70" y="382" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">The pipeline failed at</text>
+  <text x="207" y="382" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#f1f5f9">Stage 5 (AI Security Gate)</text>
+  <text x="410" y="382" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">because a</text>
+  <text x="475" y="382" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ef4444">CRITICAL</text>
+  <text x="540" y="382" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">security vulnerability was detected.</text>
+
+  <!-- Vulnerability details -->
+  <rect x="70" y="398" width="700" height="100" rx="8" fill="rgba(239,68,68,0.05)" stroke="rgba(239,68,68,0.2)" stroke-width="1"/>
+
+  <text x="90" y="420" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">•  Vulnerable Package:</text>
+  <text x="235" y="420" font-family="monospace" font-size="11" font-weight="bold" fill="#f59e0b">morgan</text>
+
+  <text x="90" y="440" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">•  Installed Version:</text>
+  <text x="225" y="440" font-family="monospace" font-size="11" fill="#ef4444">1.9.0</text>
+  <text x="310" y="440" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">→  Fixed Version:</text>
+  <text x="435" y="440" font-family="monospace" font-size="11" fill="#10b981">1.9.1</text>
+
+  <text x="90" y="460" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">•  Vulnerability ID:</text>
+  <text x="222" y="460" font-family="monospace" font-size="11" font-weight="bold" fill="#00d4ff">CVE-2019-5413</text>
+
+  <text x="90" y="480" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">•  Reason for Block:</text>
+  <text x="228" y="480" font-family="Arial, sans-serif" font-size="11" fill="#f1f5f9">CRITICAL count &gt; 0 triggers pipeline error</text>
+
+  <!-- FIX section -->
+  <text x="70" y="520" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#10b981">### 2. FIX</text>
+
+  <text x="70" y="542" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">To resolve this, update the</text>
+  <text x="255" y="542" font-family="monospace" font-size="11" font-weight="bold" fill="#f59e0b">morgan</text>
+  <text x="310" y="542" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">library to a patched version:</text>
+
+  <!-- Code block -->
+  <rect x="70" y="555" width="700" height="45" rx="8" fill="#0d1117" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="90" y="572" font-family="monospace" font-size="10" fill="#94a3b8">$ </text>
+  <text x="105" y="572" font-family="monospace" font-size="10" fill="#10b981">npm install</text>
+  <text x="192" y="572" font-family="monospace" font-size="10" fill="#f59e0b"> morgan@1.9.1</text>
+  <text x="90" y="590" font-family="monospace" font-size="10" fill="#64748b"># Or edit package.json: "morgan": "^1.9.1" and run npm install</text>
+
+  <!-- Additional steps -->
+  <text x="70" y="625" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">1.</text>
+  <text x="85" y="625" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#f1f5f9">Update Dependency</text>
+  <text x="220" y="625" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">— run the command above</text>
+
+  <text x="70" y="645" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">2.</text>
+  <text x="85" y="645" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#f1f5f9">Verify Locally</text>
+  <text x="190" y="645" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">— run Trivy scan to confirm fix</text>
+
+  <text x="70" y="665" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">3.</text>
+  <text x="85" y="665" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#f1f5f9">Re-trigger Pipeline</text>
+  <text x="225" y="665" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">— push fix and re-run CI #10</text>
+
+  <!-- Chat input bar -->
+  <rect x="55" y="680" width="730" height="25" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="70" y="697" font-family="Arial, sans-serif" font-size="10" fill="#475569">Ask follow-up: Why did npm ci fail? What exact file should I change?</text>
+  <rect x="725" y="683" width="45" height="19" rx="4" fill="url(#primaryGrad2)" opacity="0.8"/>
+  <text x="747" y="697" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#fff">Send</text>
+
+  <!-- Footer -->
+  <text x="600" y="715" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#64748b">Cloudswag Technologies — CI/CD Pipeline with AI-Powered Security Gate &amp; Gemini Debug Chat</text>
+</svg>

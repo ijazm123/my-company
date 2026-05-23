@@ -7,9 +7,9 @@ import Footer from '@/components/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'TechCore - Cloud & Security Solutions | AWS | Azure | DevOps',
+  title: 'Cloudswag Technologies - Cloud & Security Solutions | AWS | Azure | DevOps',
   description: 'Full-stack IT services: AWS, Azure cloud solutions, DevOps/AIOps automation, and enterprise cybersecurity. Transform your infrastructure with our expert team.',
-  keywords: 'AWS, Azure, DevOps, AIOps, Cloud Migration, Cybersecurity, Security Audit, IT Consulting',
+  keywords: 'AWS, Azure, DevOps, Cloud, Cybersecurity, AIOps, Infrastructure, Cloudswag Technologies',
 };
 
 export default function RootLayout({
@@ -19,6 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+      </head>
       <body className={inter.className}>
         <Navigation />
         {children}

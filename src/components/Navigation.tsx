@@ -1,71 +1,72 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <nav className="fixed w-full bg-white shadow-md z-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <Link href="/" className="text-2xl font-bold gradient-primary bg-clip-text text-transparent">
-            TechCore
+    <nav className={`fixed w-full z-50 border-b border-white/10 transition-all duration-300 ${
+      scrolled ? 'bg-bg-dark/[0.98] shadow-[0_4px_20px_rgba(0,0,0,0.3)]' : 'bg-bg-dark/90 backdrop-blur-[20px]'
+    }`}>
+      <div className="max-w-[1200px] mx-auto px-8 py-4 flex justify-between items-center">
+        <Link href="/" className="text-2xl font-extrabold text-primary flex items-center gap-2">
+          <i className="fas fa-cloud text-[1.8rem]"></i>
+          Cloudswag Technologies
+        </Link>
+        
+        <div className="hidden md:flex gap-8">
+          <Link href="#services" className="text-text-secondary hover:text-primary transition-colors font-medium relative group">
+            Services
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
           </Link>
-          
-          <div className="hidden md:flex space-x-8">
-            <Link href="#services" className="text-gray-700 hover:text-blue-600 transition">
-              Services
-            </Link>
-            <Link href="#features" className="text-gray-700 hover:text-blue-600 transition">
-              Features
-            </Link>
-            <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition">
-              Case Studies
-            </Link>
-            <Link href="/about" className="text-gray-700 hover:text-blue-600 transition">
-              About
-            </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition">
-              Contact
-            </Link>
-          </div>
-
-          <button className="hidden md:block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
-            Get Started
-          </button>
-
-          <button 
-            className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
+          <Link href="#features" className="text-text-secondary hover:text-primary transition-colors font-medium relative group">
+            Features
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+          </Link>
+          <Link href="/case-studies" className="text-text-secondary hover:text-primary transition-colors font-medium relative group">
+            Case Studies
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+          </Link>
+          <Link href="/about" className="text-text-secondary hover:text-primary transition-colors font-medium relative group">
+            About
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+          </Link>
+          <Link href="/contact" className="text-text-secondary hover:text-primary transition-colors font-medium relative group">
+            Contact
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+          </Link>
         </div>
 
-        {isOpen && (
-          <div className="md:hidden pb-4 space-y-2">
-            <Link href="#services" className="block text-gray-700 hover:text-blue-600">
-              Services
-            </Link>
-            <Link href="#features" className="block text-gray-700 hover:text-blue-600">
-              Features
-            </Link>
-            <Link href="/case-studies" className="block text-gray-700 hover:text-blue-600">
-              Case Studies
-            </Link>
-            <Link href="/about" className="block text-gray-700 hover:text-blue-600">
-              About
-            </Link>
-            <Link href="/contact" className="block text-gray-700 hover:text-blue-600">
-              Contact
-            </Link>
-          </div>
-        )}
+        <Link href="/contact" className="hidden md:block gradient-primary text-white px-6 py-2.5 rounded-full font-semibold hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(0,212,255,0.3)] transition-all duration-300">
+          Get Started
+        </Link>
+
+        <button 
+          className="md:hidden text-text-primary text-xl"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <i className={`fas ${isOpen ? 'fa-times' : 'fa-bars'}`}></i>
+        </button>
       </div>
+
+      {isOpen && (
+        <div className="md:hidden bg-bg-dark border-b border-white/10 px-8 py-4 flex flex-col gap-4">
+          <Link href="#services" className="text-text-secondary hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>Services</Link>
+          <Link href="#features" className="text-text-secondary hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>Features</Link>
+          <Link href="/case-studies" className="text-text-secondary hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>Case Studies</Link>
+          <Link href="/about" className="text-text-secondary hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>About</Link>
+          <Link href="/contact" className="text-text-secondary hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>Contact</Link>
+        </div>
+      )}
     </nav>
   );
 }

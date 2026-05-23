@@ -1,23 +1,26 @@
-# TechCore Website - Setup & Deployment Guide
+# NexusGuard Website - Setup & Deployment Guide
 
 ## Overview
-Your professional Next.js website for TechCore - an IT services startup specializing in AWS, Azure, DevOps, and Cybersecurity solutions.
+Your professional Next.js website for NexusGuard - a Cloud DevOps & Cybersecurity solutions company. Features a dark cybersecurity-themed design with glassmorphism effects, animated elements, and a single-page landing experience.
 
 ## Website Structure
 
 ### Pages
-- **Homepage** (`/src/app/page.tsx`) - Showcases your services with Hero section, Features, and CTA
-- **About** (`/src/app/about/page.tsx`) - Team bios with detailed expertise and certifications
-- **Contact** (`/src/app/contact/page.tsx`) - Contact form for client inquiries
+- **Homepage** (`/src/app/page.tsx`) - Single-page landing with Hero, Services, Features, Pricing, Testimonials, CTA, and Contact sections
+- **About** (`/src/app/about/page.tsx`) - Team bios with certifications and value cards
+- **Contact** (`/src/app/contact/page.tsx`) - Standalone contact form (also embedded on homepage)
+- **Case Studies** (`/src/app/case-studies/page.tsx`) - Expandable case study cards
 
 ### Components
-- **Navigation** - Top navigation bar with links to all pages
-- **Hero** - Eye-catching hero section with value proposition
-- **Services** - 4 main service offerings (AWS, Azure, DevOps, Security)
-- **Features** - Key differentiators (Multi-cloud, Support, Cost Optimization, etc.)
-- **Testimonials** - Client success stories (customize with real clients)
-- **CTA** - Call-to-action section to encourage consultations
-- **Footer** - Company info, links, and contact details
+- **Navigation** - Glassmorphism navbar with scroll detection, anchor links (#services, #features, #pricing, #testimonials, #contact), mobile hamburger menu
+- **Hero** - Animated stat counters (IntersectionObserver), floating Font Awesome icons, radial gradient backgrounds, hero grid pattern
+- **Services** - 6 service cards (Cloud Infrastructure, DevOps Automation, Network Engineering, Cybersecurity, Data Protection, Observability & Monitoring) with FA icons and hover animations
+- **Features** - Live SOC dashboard with real-time threat count/latency updates, 4 feature items (Zero-Trust, AI Threat Detection, Global Edge, Compliance)
+- **Pricing** - 3-tier pricing cards (Starter $499/mo, Professional $1,499/mo featured, Enterprise custom) with feature lists
+- **ContactSection** - Inline contact form with service dropdown, submit animation (idle→sending→sent), contact info sidebar
+- **Testimonials** - Client testimonials with star ratings and avatar initials
+- **CTA** - Rotating gradient background animation, "Get Free Security Audit" button
+- **Footer** - 4-column grid (Brand+socials, Services, Company, Resources) with social icons (Twitter, LinkedIn, GitHub, Discord)
 
 ## Customization Guide
 
@@ -28,18 +31,18 @@ Edit these files with your actual company details:
 ```tsx
 // Update metadata
 metadata: {
-  title: 'TechCore - Cloud & Security Solutions | AWS | Azure | DevOps',
+  title: 'NexusGuard - Cloud DevOps & Cybersecurity Solutions',
   description: 'Your company description...',
 }
 ```
 
 **File: `src/components/Navigation.tsx`**
-- Update company logo/name in the navbar
+- Update company logo/name in the navbar (currently "NexusGuard" with shield icon)
 
 **File: `src/components/Footer.tsx`**
-- Update contact email: `info@techcore.io` → your email
-- Update phone number: `+1 (234) 567-890` → your phone
-- Add LinkedIn and GitHub profile links
+- Update contact email: `info@nexusguard.io` → your email
+- Update phone number → your phone
+- Add your social media profile links (Twitter, LinkedIn, GitHub, Discord)
 
 ### 2. Add Team Information
 Edit `src/app/about/page.tsx` and update the `team` array with your actual team members:
@@ -56,11 +59,17 @@ Edit `src/app/about/page.tsx` and update the `team` array with your actual team 
 
 ### 3. Update Services
 Edit `src/components/Services.tsx` to customize:
-- Service titles and descriptions
+- Service titles and descriptions (currently 6 services: Cloud Infrastructure, DevOps Automation, Network Engineering, Cybersecurity, Data Protection, Observability & Monitoring)
 - Feature lists for each service
-- Icons (emoji or custom)
+- Font Awesome icons (e.g., `fa-cloud`, `fa-shield-halved`)
 
-### 4. Update Testimonials
+### 4. Update Pricing
+Edit `src/components/Pricing.tsx` to customize:
+- Plan names, prices, and feature lists
+- Currently: Starter ($499/mo), Professional ($1,499/mo), Enterprise (Custom)
+- The middle plan is highlighted with "MOST POPULAR" badge
+
+### 5. Update Testimonials
 Edit `src/components/Testimonials.tsx`:
 ```tsx
 {

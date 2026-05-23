@@ -1,0 +1,241 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#d97706;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="600" fill="url(#bgGrad)"/>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="1"/>
+  </pattern>
+  <rect width="1200" height="600" fill="url(#grid)"/>
+
+  <!-- Title -->
+  <text x="600" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#f1f5f9">CD Pipeline (GitOps) — Git is the Single Source of Truth</text>
+  <rect x="300" y="48" width="600" height="3" rx="2" fill="url(#primaryGrad)"/>
+  <text x="600" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">ArgoCD watches Git repo, detects changes, diffs &amp; syncs to Kubernetes — continuous reconciliation &amp; self-healing</text>
+
+  <!-- ===== STEP 1: Update Helm Chart ===== -->
+  <rect x="30" y="100" width="180" height="150" rx="12" fill="url(#cardGrad)" stroke="#3b82f6" stroke-width="1.5" filter="url(#shadow)"/>
+  <circle cx="58" cy="120" r="16" fill="url(#blueGrad)"/>
+  <text x="58" y="126" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">1</text>
+  <text x="82" y="126" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#3b82f6">UPDATE</text>
+
+  <rect x="50" y="145" width="140" height="42" rx="8" fill="rgba(59,130,246,0.1)"/>
+  <text x="70" y="172" font-family="Arial, sans-serif" font-size="24">⎈</text>
+  <text x="100" y="168" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#f1f5f9">HELM</text>
+
+  <text x="120" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">Update Helm Chart</text>
+  <text x="120" y="226" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">(values.yaml)</text>
+  <text x="120" y="242" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#64748b">Update image tag, values,</text>
+  <text x="120" y="254" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#64748b">configs, etc.</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="210" y1="175" x2="248" y2="175" stroke="#3b82f6" stroke-width="2.5"/>
+  <polygon points="244,169 256,175 244,181" fill="#3b82f6"/>
+
+  <!-- ===== STEP 2: Update ArgoCD Application YAML ===== -->
+  <rect x="258" y="100" width="180" height="150" rx="12" fill="url(#cardGrad)" stroke="#7c3aed" stroke-width="1.5" filter="url(#shadow)"/>
+  <circle cx="286" cy="120" r="16" fill="#7c3aed"/>
+  <text x="286" y="126" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">2</text>
+  <text x="310" y="126" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#7c3aed">UPDATE</text>
+
+  <rect x="278" y="145" width="140" height="42" rx="8" fill="rgba(124,58,237,0.1)"/>
+  <text x="298" y="172" font-family="Arial, sans-serif" font-size="20">📄</text>
+  <text x="322" y="168" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#f1f5f9">ArgoCD YAML</text>
+
+  <text x="348" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">Update ArgoCD</text>
+  <text x="348" y="226" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">Application YAML</text>
+  <text x="348" y="242" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#64748b">Sync policy, parameters,</text>
+  <text x="348" y="254" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#64748b">options, etc.</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="438" y1="175" x2="476" y2="175" stroke="#7c3aed" stroke-width="2.5"/>
+  <polygon points="472,169 484,175 472,181" fill="#7c3aed"/>
+
+  <!-- ===== STEP 3: Commit & Push to Git ===== -->
+  <rect x="486" y="100" width="180" height="150" rx="12" fill="url(#cardGrad)" stroke="#00d4ff" stroke-width="1.5" filter="url(#shadow)"/>
+  <circle cx="514" cy="120" r="16" fill="#00d4ff"/>
+  <text x="514" y="126" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0a0e1a">3</text>
+  <text x="538" y="126" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#00d4ff">COMMIT</text>
+
+  <rect x="506" y="145" width="140" height="42" rx="8" fill="rgba(0,212,255,0.1)"/>
+  <text x="526" y="172" font-family="Arial, sans-serif" font-size="20">&lt;/&gt;</text>
+  <text x="560" y="168" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#f1f5f9">Git Push</text>
+
+  <text x="576" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#e2e8f0">Commit &amp; Push</text>
+  <text x="576" y="226" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">to Git</text>
+  <text x="576" y="242" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#64748b">Changes committed</text>
+  <text x="576" y="254" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#64748b">(Helm charts / manifests)</text>
+
+  <!-- Arrow 3→Git Repo -->
+  <line x1="666" y1="175" x2="704" y2="175" stroke="#00d4ff" stroke-width="2.5"/>
+  <polygon points="700,169 712,175 700,181" fill="#00d4ff"/>
+
+  <!-- ===== Git Repository (Central Hub) ===== -->
+  <rect x="714" y="90" width="200" height="170" rx="14" fill="url(#cardGrad)" stroke="#f59e0b" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="714" y="90" width="200" height="5" rx="2" fill="url(#orangeGrad)"/>
+
+  <text x="814" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="22">📁</text>
+  <text x="814" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b">Git Repository</text>
+  <text x="814" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#f59e0b">(Single Source of Truth)</text>
+
+  <line x1="732" y1="164" x2="896" y2="164" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
+
+  <text x="734" y="182" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">• Helm Charts</text>
+  <text x="734" y="198" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">• ArgoCD Manifests</text>
+  <text x="734" y="214" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">• Application YAMLs</text>
+  <text x="734" y="230" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">• Kustomize Overlays</text>
+  <text x="734" y="246" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">• Configs / Scripts</text>
+
+  <!-- Arrow Git→ArgoCD -->
+  <line x1="914" y1="175" x2="952" y2="175" stroke="#f59e0b" stroke-width="2.5"/>
+  <polygon points="948,169 960,175 948,181" fill="#f59e0b"/>
+  <text x="934" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#64748b" font-style="italic">watches</text>
+
+  <!-- ===== ArgoCD ===== -->
+  <rect x="962" y="100" width="100" height="150" rx="12" fill="url(#cardGrad)" stroke="#f97316" stroke-width="1.5" filter="url(#shadow)"/>
+
+  <rect x="978" y="115" width="68" height="40" rx="8" fill="rgba(249,115,22,0.12)"/>
+  <text x="996" y="142" font-family="Arial, sans-serif" font-size="24">🐙</text>
+  <text x="1020" y="140" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#f1f5f9">argo</text>
+
+  <text x="1012" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#f97316">ArgoCD</text>
+  <text x="1012" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">Watches Git Repo</text>
+  <text x="1012" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">Detects changes</text>
+  <text x="1012" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">Diffs &amp; Syncs</text>
+  <text x="1012" y="234" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#10b981" font-weight="bold">(Self-healing)</text>
+
+  <!-- Arrow ArgoCD→K8s -->
+  <line x1="1062" y1="175" x2="1084" y2="175" stroke="#10b981" stroke-width="2.5"/>
+  <polygon points="1080,169 1092,175 1080,181" fill="#10b981"/>
+
+  <!-- ===== Deployment (Kubernetes) ===== -->
+  <rect x="1092" y="100" width="90" height="150" rx="12" fill="url(#cardGrad)" stroke="#10b981" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="1092" y="100" width="90" height="4" rx="2" fill="url(#greenGrad)"/>
+
+  <text x="1137" y="138" text-anchor="middle" font-family="Arial, sans-serif" font-size="28">☸</text>
+  <text x="1137" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#10b981">DEPLOYMENT</text>
+  <text x="1137" y="176" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#64748b">(Kubernetes)</text>
+
+  <line x1="1102" y1="184" x2="1172" y2="184" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
+
+  <rect x="1102" y="192" width="72" height="18" rx="4" fill="rgba(16,185,129,0.1)" stroke="#10b981" stroke-width="0.5"/>
+  <text x="1138" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#10b981">Pods</text>
+
+  <rect x="1102" y="216" width="72" height="18" rx="4" fill="rgba(16,185,129,0.1)" stroke="#10b981" stroke-width="0.5"/>
+  <text x="1138" y="229" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#10b981">Deployments</text>
+
+  <rect x="1102" y="240" width="72" height="18" rx="4" fill="rgba(16,185,129,0.1)" stroke="#10b981" stroke-width="0.5"/>
+  <text x="1138" y="253" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#10b981">Services</text>
+
+  <!-- ===== GITOPS RECONCILIATION LOOP ===== -->
+  <path d="M 1137 260 L 1137 295 Q 1137 315 1117 315 L 90 315 Q 70 315 70 295 L 70 260" 
+        fill="none" stroke="#22c55e" stroke-width="2" stroke-dasharray="8,5" opacity="0.5"/>
+  <polygon points="65,264 75,264 70,256" fill="#22c55e" opacity="0.6"/>
+  <text x="600" y="336" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#22c55e" font-weight="bold" font-style="italic">↻ GitOps Continuous Reconciliation — changes applied to cluster automatically</text>
+
+  <!-- ===== CONTAINER REGISTRY (feeds into CD) ===== -->
+  <rect x="30" y="370" width="170" height="80" rx="12" fill="url(#cardGrad)" stroke="#00d4ff" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="115" y="398" text-anchor="middle" font-family="Arial, sans-serif" font-size="18">🐳</text>
+  <text x="115" y="418" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#00d4ff">Container Registry</text>
+  <text x="115" y="434" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">CI pushes images → triggers CD</text>
+
+  <!-- Arrow from registry to step 1 -->
+  <line x1="115" y1="370" x2="115" y2="260" stroke="#00d4ff" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5"/>
+  <polygon points="110,264 120,264 115,256" fill="#00d4ff" opacity="0.6"/>
+
+  <!-- ===== GEMINI AI (drift detection & analysis) ===== -->
+  <rect x="220" y="360" width="250" height="100" rx="12" fill="url(#cardGrad)" stroke="#7c3aed" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="220" y="360" width="250" height="4" rx="2" fill="#7c3aed"/>
+  <text x="250" y="394" font-family="Arial, sans-serif" font-size="22">🤖</text>
+  <text x="280" y="393" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#a78bfa">Gemini AI</text>
+  <text x="232" y="414" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">• Analyzes drift &amp; deployment failures</text>
+  <text x="232" y="428" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">• Checks MCP logs → root cause analysis</text>
+  <text x="232" y="442" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">• Suggests fix → creates PR in Git repo</text>
+  <text x="232" y="456" font-family="Arial, sans-serif" font-size="9" fill="#64748b">• Auto-remediation via GitOps pipeline</text>
+
+  <!-- Arrow: Gemini → Git Repo (creates PR) -->
+  <path d="M 345 360 L 345 348 Q 345 340 360 340 L 800 340 Q 814 340 814 330 L 814 260" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5"/>
+  <polygon points="809,264 819,264 814,256" fill="#a78bfa" opacity="0.6"/>
+  <text x="580" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#a78bfa" font-style="italic">creates PR with fix → Git</text>
+
+  <!-- ===== MCP SERVER (K8s + Grafana + Prometheus) ===== -->
+  <rect x="490" y="360" width="260" height="100" rx="12" fill="url(#cardGrad)" stroke="#06b6d4" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="490" y="360" width="260" height="4" rx="2" fill="#06b6d4"/>
+  <text x="520" y="394" font-family="Arial, sans-serif" font-size="22">🔌</text>
+  <text x="548" y="393" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#06b6d4">MCP Servers</text>
+  <text x="660" y="393" font-family="Arial, sans-serif" font-size="9" fill="#64748b">(K8s · Grafana · Prom)</text>
+  <text x="502" y="414" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">• Fetches pod logs, events, describe</text>
+  <text x="502" y="428" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">• Queries Prometheus metrics &amp; alerts</text>
+  <text x="502" y="442" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">• Reads Grafana dashboards &amp; annotations</text>
+  <text x="502" y="456" font-family="Arial, sans-serif" font-size="9" fill="#64748b">• Combined payload sent to Gemini AI</text>
+
+  <!-- Arrow: MCP → Gemini (sends combined logs) -->
+  <line x1="490" y1="410" x2="470" y2="410" stroke="#06b6d4" stroke-width="1.5"/>
+  <polygon points="474,404 466,410 474,416" fill="#06b6d4"/>
+  <text x="478" y="404" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#06b6d4">logs</text>
+
+  <!-- Arrow: K8s Deployment → MCP (monitors) -->
+  <path d="M 1137 260 L 1137 350 Q 1137 365 1120 365 L 760 365 Q 750 365 750 375" fill="none" stroke="#06b6d4" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.4"/>
+  <text x="950" y="358" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#06b6d4" font-style="italic">monitors cluster</text>
+
+  <!-- Key Benefits -->
+  <rect x="30" y="478" width="1140" height="42" rx="10" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="55" y="504" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#94a3b8" letter-spacing="1">KEY BENEFITS</text>
+
+  <circle cx="170" cy="500" r="4" fill="#f59e0b"/>
+  <text x="180" y="505" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">GitOps Native</text>
+
+  <circle cx="270" cy="500" r="4" fill="#10b981"/>
+  <text x="280" y="505" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">Self-Healing</text>
+
+  <circle cx="370" cy="500" r="4" fill="#3b82f6"/>
+  <text x="380" y="505" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">Helm Config</text>
+
+  <circle cx="465" cy="500" r="4" fill="#7c3aed"/>
+  <text x="475" y="505" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">AI Remediation</text>
+
+  <circle cx="575" cy="500" r="4" fill="#06b6d4"/>
+  <text x="585" y="505" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">MCP-Powered</text>
+
+  <circle cx="680" cy="500" r="4" fill="#00d4ff"/>
+  <text x="690" y="505" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">Reconciliation</text>
+
+  <circle cx="790" cy="500" r="4" fill="#f97316"/>
+  <text x="800" y="505" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">PR Auditability</text>
+
+  <circle cx="900" cy="500" r="4" fill="#ef4444"/>
+  <text x="910" y="505" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">Drift Detection</text>
+
+  <circle cx="1010" cy="500" r="4" fill="#22c55e"/>
+  <text x="1020" y="505" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">Auto-Fix via Gemini</text>
+
+  <text x="600" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#475569">MCP Servers monitor K8s/Grafana/Prometheus — Gemini AI analyzes issues, creates PRs — ArgoCD auto-deploys fixes via GitOps</text>
+</svg>

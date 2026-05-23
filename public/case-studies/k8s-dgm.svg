@@ -1,0 +1,222 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 800">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="100%" stop-color="#0d1224"/>
+    </linearGradient>
+    <linearGradient id="navGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0f1629"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+    <filter id="glow">
+      <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#00d4ff" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="800" fill="url(#bgGrad)"/>
+
+  <!-- ===== TOP NAV BAR ===== -->
+  <rect width="1400" height="44" fill="url(#navGrad)"/>
+  <line x1="0" y1="44" x2="1400" y2="44" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Back arrow -->
+  <text x="20" y="28" font-family="Arial, sans-serif" font-size="16" fill="#64748b">←</text>
+
+  <!-- Project icon + name -->
+  <text x="50" y="28" font-family="Arial, sans-serif" font-size="14" fill="#f59e0b">🚀</text>
+  <text x="72" y="29" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#e2e8f0">ecommerce-platform</text>
+
+  <!-- Nav tabs -->
+  <text x="230" y="29" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">📋 Pipeline</text>
+  <text x="330" y="29" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">📁 Repo Structure</text>
+  <text x="470" y="29" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">📦 Artifactory</text>
+  <text x="590" y="29" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">● Helm Chart Repo</text>
+  <text x="730" y="29" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#f59e0b">⚙ Argo App Repo</text>
+  <rect x="720" y="40" width="140" height="3" rx="1.5" fill="#f59e0b"/>
+  <text x="900" y="29" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">🖥 Kube Terminal</text>
+
+  <!-- ===== ENVIRONMENTS BAR ===== -->
+  <rect x="0" y="48" width="1400" height="38" fill="#111827"/>
+  <text x="20" y="72" font-family="monospace" font-size="12" font-weight="bold" fill="#94a3b8">ENVIRONMENTS (3):</text>
+
+  <!-- Env chips -->
+  <rect x="160" y="56" width="168" height="24" rx="12" fill="transparent" stroke="#475569" stroke-width="1"/>
+  <text x="178" y="73" font-family="monospace" font-size="11" fill="#cbd5e1">dev-payment-service</text>
+
+  <rect x="340" y="56" width="182" height="24" rx="12" fill="transparent" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="358" y="73" font-family="monospace" font-size="11" fill="#f59e0b">staging-payment-svc</text>
+
+  <rect x="536" y="56" width="166" height="24" rx="12" fill="transparent" stroke="#475569" stroke-width="1"/>
+  <text x="554" y="73" font-family="monospace" font-size="11" fill="#cbd5e1">prod-payment-svc</text>
+
+  <!-- ===== ENVIRONMENT HEADER ===== -->
+  <text x="20" y="116" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#e2e8f0">⚙ staging-payment-svc</text>
+  <text x="20" y="138" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">🧊 payment-service@1.4.2    📁 staging-payment-svc    🔗 in-cluster    📁 prod-apps    🔖 a3f72b1</text>
+
+  <!-- ===== SUB-TABS ===== -->
+  <rect x="0" y="150" width="1400" height="36" fill="transparent"/>
+  <line x1="0" y1="186" x2="1400" y2="186" stroke="#1e293b" stroke-width="1"/>
+
+  <text x="30" y="174" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">📄 Overview</text>
+  <text x="120" y="174" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">⚙ Helm Values</text>
+  <text x="230" y="174" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">🚀 Deployment</text>
+  <text x="350" y="174" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">⏰ Cron Jobs</text>
+  <text x="455" y="174" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#7c3aed">📊 K8s Manifest Diagram</text>
+  <rect x="445" y="183" width="170" height="3" rx="1.5" fill="#7c3aed"/>
+  <text x="640" y="174" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">📊 Chart Diagram</text>
+  <text x="770" y="174" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">📝 Raw YAML</text>
+
+  <!-- ===== ZOOM CONTROLS ===== -->
+  <rect x="20" y="196" width="28" height="24" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="30" y="212" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#94a3b8">−</text>
+  <text x="62" y="214" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8">69%</text>
+  <rect x="88" y="196" width="28" height="24" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="98" y="213" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#94a3b8">+</text>
+  <rect x="126" y="196" width="50" height="24" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="140" y="213" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">Reset</text>
+  <text x="190" y="214" font-family="Arial, sans-serif" font-size="10" fill="#475569">Drag to pan · Scroll to zoom</text>
+
+  <!-- ===== CANVAS AREA ===== -->
+  <rect x="10" y="230" width="1380" height="560" rx="12" fill="#0d1224" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Dotted grid pattern -->
+  <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+    <circle cx="15" cy="15" r="0.5" fill="#1e293b"/>
+  </pattern>
+  <rect x="10" y="230" width="1380" height="560" rx="12" fill="url(#dots)"/>
+
+  <!-- ===== ARGOCD APPLICATION NODE ===== -->
+  <rect x="50" y="480" width="200" height="80" rx="10" fill="#1e1b4b" stroke="#7c3aed" stroke-width="2" filter="url(#shadow)"/>
+  <text x="150" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#a78bfa">📦 ArgoCD Application</text>
+  <text x="150" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e2e8f0">payment-service</text>
+  <text x="150" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#64748b">ns: staging-payment-svc</text>
+
+  <!-- ===== HELM CHART NODE ===== -->
+  <rect x="310" y="480" width="200" height="60" rx="10" fill="#1e1b4b" stroke="#f59e0b" stroke-width="2" filter="url(#shadow)"/>
+  <text x="410" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#f59e0b">🧊 Helm Chart</text>
+  <text x="410" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e2e8f0">payment-service@1.4.2</text>
+
+  <!-- Arrow: ArgoCD → Helm -->
+  <line x1="250" y1="510" x2="310" y2="510" stroke="#475569" stroke-width="1.5"/>
+  <polygon points="306,506 314,510 306,514" fill="#475569"/>
+
+  <!-- ===== NETWORKING GROUP ===== -->
+  <rect x="560" y="290" width="120" height="38" rx="8" fill="#0f4c4c" stroke="#10b981" stroke-width="1.5"/>
+  <text x="620" y="314" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#10b981">🌐 Networking</text>
+
+  <!-- Arrow: Helm → Networking -->
+  <line x1="510" y1="500" x2="540" y2="500" stroke="#475569" stroke-width="1"/>
+  <line x1="540" y1="500" x2="540" y2="310" stroke="#475569" stroke-width="1"/>
+  <line x1="540" y1="310" x2="560" y2="310" stroke="#475569" stroke-width="1"/>
+  <polygon points="556,306 564,310 556,314" fill="#475569"/>
+
+  <!-- Networking children -->
+  <rect x="730" y="260" width="170" height="42" rx="8" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+  <text x="740" y="280" font-family="Arial, sans-serif" font-size="10" fill="#10b981">📊 DestinationRule ↗</text>
+  <text x="740" y="294" font-family="Arial, sans-serif" font-size="9" fill="#64748b">istio-mesh.yaml</text>
+
+  <rect x="730" y="310" width="170" height="42" rx="8" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+  <text x="740" y="330" font-family="Arial, sans-serif" font-size="10" fill="#3b82f6">📊 VirtualService ↗</text>
+  <text x="740" y="344" font-family="Arial, sans-serif" font-size="9" fill="#64748b">istio-mesh.yaml</text>
+
+  <rect x="730" y="360" width="170" height="42" rx="8" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+  <text x="740" y="380" font-family="Arial, sans-serif" font-size="10" fill="#06b6d4">🔵 Sidecar</text>
+  <text x="740" y="394" font-family="Arial, sans-serif" font-size="9" fill="#64748b">istio-mesh.yaml</text>
+
+  <rect x="730" y="410" width="170" height="42" rx="8" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+  <text x="740" y="430" font-family="Arial, sans-serif" font-size="10" fill="#22c55e">🌐 Service ↗</text>
+  <text x="740" y="444" font-family="Arial, sans-serif" font-size="9" fill="#64748b">service.yaml</text>
+
+  <!-- Arrows: Networking → children -->
+  <line x1="680" y1="310" x2="730" y2="280" stroke="#475569" stroke-width="1"/>
+  <line x1="680" y1="310" x2="730" y2="330" stroke="#475569" stroke-width="1"/>
+  <line x1="680" y1="310" x2="730" y2="380" stroke="#475569" stroke-width="1"/>
+  <line x1="680" y1="310" x2="730" y2="430" stroke="#475569" stroke-width="1"/>
+
+  <!-- ===== CONFIG GROUP ===== -->
+  <rect x="560" y="460" width="120" height="38" rx="8" fill="#0f4c4c" stroke="#10b981" stroke-width="1.5"/>
+  <text x="620" y="484" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#10b981">⚙ Config</text>
+
+  <!-- Arrow: Helm → Config -->
+  <line x1="510" y1="510" x2="535" y2="510" stroke="#475569" stroke-width="1"/>
+  <line x1="535" y1="510" x2="535" y2="480" stroke="#475569" stroke-width="1"/>
+  <line x1="535" y1="480" x2="560" y2="480" stroke="#475569" stroke-width="1"/>
+
+  <!-- Config children -->
+  <rect x="730" y="460" width="170" height="42" rx="8" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+  <text x="740" y="480" font-family="Arial, sans-serif" font-size="10" fill="#f59e0b">📋 ConfigMap ↗</text>
+  <text x="740" y="494" font-family="Arial, sans-serif" font-size="9" fill="#64748b">configmap.yaml</text>
+
+  <rect x="730" y="510" width="170" height="42" rx="8" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+  <text x="740" y="530" font-family="Arial, sans-serif" font-size="10" fill="#a78bfa">🔒 Secret ↗</text>
+  <text x="740" y="544" font-family="Arial, sans-serif" font-size="9" fill="#64748b">secrets.yaml</text>
+
+  <!-- Arrows: Config → children -->
+  <line x1="680" y1="480" x2="730" y2="480" stroke="#475569" stroke-width="1"/>
+  <line x1="680" y1="480" x2="730" y2="530" stroke="#475569" stroke-width="1"/>
+
+  <!-- ===== STORAGE GROUP ===== -->
+  <rect x="560" y="570" width="120" height="38" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="620" y="594" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#3b82f6">💾 Storage</text>
+
+  <!-- Arrow: Helm → Storage -->
+  <line x1="510" y1="520" x2="530" y2="520" stroke="#475569" stroke-width="1"/>
+  <line x1="530" y1="520" x2="530" y2="590" stroke="#475569" stroke-width="1"/>
+  <line x1="530" y1="590" x2="560" y2="590" stroke="#475569" stroke-width="1"/>
+
+  <!-- Storage children -->
+  <rect x="730" y="560" width="200" height="42" rx="8" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+  <text x="740" y="580" font-family="Arial, sans-serif" font-size="10" fill="#3b82f6">📦 PersistentVolumeClaim ↗</text>
+  <text x="740" y="594" font-family="Arial, sans-serif" font-size="9" fill="#64748b">pvc.yaml</text>
+
+  <rect x="730" y="610" width="200" height="42" rx="8" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+  <text x="740" y="630" font-family="Arial, sans-serif" font-size="10" fill="#3b82f6">📦 PersistentVolume ↗</text>
+  <text x="740" y="644" font-family="Arial, sans-serif" font-size="9" fill="#64748b">pv.yaml</text>
+
+  <!-- Arrows: Storage → children -->
+  <line x1="680" y1="590" x2="730" y2="580" stroke="#475569" stroke-width="1"/>
+  <line x1="680" y1="590" x2="730" y2="630" stroke="#475569" stroke-width="1"/>
+
+  <!-- ===== WORKLOADS GROUP ===== -->
+  <rect x="560" y="680" width="120" height="38" rx="8" fill="#3b1f1f" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="620" y="704" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ef4444">🚀 Workloads</text>
+
+  <!-- Arrow: Helm → Workloads -->
+  <line x1="510" y1="530" x2="525" y2="530" stroke="#475569" stroke-width="1"/>
+  <line x1="525" y1="530" x2="525" y2="700" stroke="#475569" stroke-width="1"/>
+  <line x1="525" y1="700" x2="560" y2="700" stroke="#475569" stroke-width="1"/>
+
+  <!-- Workloads children -->
+  <rect x="730" y="670" width="170" height="42" rx="8" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+  <text x="740" y="690" font-family="Arial, sans-serif" font-size="10" fill="#ef4444">🚀 Deployment</text>
+  <text x="740" y="704" font-family="Arial, sans-serif" font-size="9" fill="#64748b">deployment.yaml</text>
+
+  <rect x="730" y="720" width="200" height="42" rx="8" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+  <text x="740" y="740" font-family="Arial, sans-serif" font-size="10" fill="#f59e0b">📊 HorizontalPodAutoscaler ↗</text>
+  <text x="740" y="754" font-family="Arial, sans-serif" font-size="9" fill="#64748b">hpa.yaml</text>
+
+  <!-- Arrows: Workloads → children -->
+  <line x1="680" y1="700" x2="730" y2="690" stroke="#475569" stroke-width="1"/>
+  <line x1="680" y1="700" x2="730" y2="740" stroke="#475569" stroke-width="1"/>
+
+  <!-- ===== MANAGED COLUMN ===== -->
+  <rect x="960" y="670" width="100" height="32" rx="6" fill="#111827" stroke="#334155" stroke-width="1"/>
+  <text x="1010" y="691" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">(managed)</text>
+
+  <!-- Arrow: Deployment → managed -->
+  <line x1="900" y1="690" x2="960" y2="686" stroke="#475569" stroke-width="1"/>
+
+  <!-- Status indicators -->
+  <rect x="1110" y="260" width="80" height="28" rx="6" fill="#052e16" stroke="#22c55e" stroke-width="1"/>
+  <text x="1150" y="279" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#22c55e">✓ Synced</text>
+
+  <rect x="1110" y="300" width="80" height="28" rx="6" fill="#052e16" stroke="#22c55e" stroke-width="1"/>
+  <text x="1150" y="319" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#22c55e">● Healthy</text>
+
+  <!-- Label -->
+  <text x="960" y="260" font-family="Arial, sans-serif" font-size="9" fill="#475569">deployment.yaml</text>
+</svg>

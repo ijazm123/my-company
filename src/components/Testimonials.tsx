@@ -3,39 +3,57 @@ export default function Testimonials() {
     {
       name: 'John Smith',
       company: 'TechCorp Inc',
-      text: 'TechCore reduced our AWS costs by 35% while improving performance. Outstanding service and deep technical expertise!',
+      text: 'Cloudswag Technologies reduced our AWS costs by 35% while improving performance. Outstanding service and deep technical expertise!',
       role: 'CTO',
+      initials: 'JS',
     },
     {
       name: 'Sarah Johnson',
       company: 'DataFlow Solutions',
       text: 'Their DevOps expertise transformed our entire deployment pipeline. Reduced deployment time from hours to minutes.',
       role: 'Engineering Director',
+      initials: 'SJ',
     },
     {
       name: 'Michael Chen',
       company: 'SecureNet Systems',
       text: 'Professional, responsive, and deeply knowledgeable. They handled our security audit and compliance perfectly.',
       role: 'VP Operations',
+      initials: 'MC',
     },
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="testimonials" className="py-24 px-8 bg-gradient-to-b from-bg-dark via-bg-card/50 to-bg-dark">
+      <div className="max-w-[1200px] mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">What Clients Say</h2>
-          <p className="text-xl text-gray-600">Trusted by leading enterprises</p>
+          <h2 className="text-[clamp(2rem,4vw,3rem)] font-extrabold mb-4">
+            Trusted by <span className="text-primary">Leading Enterprises</span>
+          </h2>
+          <p className="text-text-secondary max-w-[600px] mx-auto text-lg">
+            Trusted by leading enterprises
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
-              <p className="text-gray-700 mb-6 italic">{`"${testimonial.text}"`}</p>
-              <div>
-                <p className="font-bold text-gray-900">{testimonial.name}</p>
-                <p className="text-sm text-gray-600">{testimonial.role} at {testimonial.company}</p>
+            <div key={index} className="bg-bg-card border border-white/10 rounded-[20px] p-8 hover:-translate-y-1 hover:border-primary/20 transition-all duration-300">
+              <div className="text-accent text-sm mb-4">
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+              </div>
+              <p className="text-text-secondary italic mb-6 leading-relaxed">&ldquo;{testimonial.text}&rdquo;</p>
+              <div className="flex items-center gap-4">
+                <div className="w-[50px] h-[50px] rounded-full gradient-primary flex items-center justify-center font-bold text-white text-lg">
+                  {testimonial.initials}
+                </div>
+                <div>
+                  <h4 className="font-semibold">{testimonial.name}</h4>
+                  <p className="text-text-secondary text-sm">{testimonial.role}, {testimonial.company}</p>
+                </div>
               </div>
             </div>
           ))}
