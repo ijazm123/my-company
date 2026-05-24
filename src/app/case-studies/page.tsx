@@ -712,6 +712,88 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
+      {/* Upcoming Case Studies */}
+      <section className="py-24 px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex items-center gap-3 mb-2">
+            <span className="inline-block bg-yellow-500/10 text-yellow-400 px-3 py-1 rounded-full text-sm font-semibold">Coming Soon</span>
+          </div>
+          <h2 className="text-3xl font-extrabold mb-4">Upcoming Case <span className="gradient-text">Studies</span></h2>
+          <p className="text-text-secondary mb-10 max-w-2xl">Projects currently in progress. Stay tuned for detailed write-ups once delivered.</p>
+
+          <div className="space-y-6">
+            {/* Backstage */}
+            <div className="bg-bg-card border border-yellow-500/20 rounded-[20px] overflow-hidden relative">
+              <div className="absolute top-4 right-4">
+                <span className="bg-yellow-500/15 text-yellow-400 text-xs font-semibold px-3 py-1 rounded-full border border-yellow-500/30">In Progress</span>
+              </div>
+              <div className="p-8">
+                <div className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold mb-3">
+                  Developer Portal &amp; Microservices
+                </div>
+                <h3 className="text-2xl font-bold mb-2">Backstage Developer Portal — Customized for Microservices</h3>
+                <p className="text-text-secondary mb-6">
+                  Custom Backstage implementation for organizations running microservices architectures. A unified developer portal that brings service catalog, API documentation, CI/CD visibility, infrastructure tooling, and team ownership into a single pane of glass — eliminating the fragmentation that comes with scaling to dozens or hundreds of services. The built-in Scaffolder lets teams spin up production-ready microservices from golden path templates in minutes — with pre-wired CI/CD, Kubernetes manifests, observability, and compliance baked in from day one. An AI chat agent powered by the Backstage MCP server lets developers query service ownership, dependencies, API specs, and platform status using natural language — directly from VS Code via native MCP support, without ever leaving their editor.
+                </p>
+
+                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <h4 className="text-sm font-bold text-yellow-400 uppercase tracking-wider mb-3">What We&apos;re Building</h4>
+                    <ul className="space-y-2">
+                      {[
+                        'Custom Backstage plugins for internal tooling integration',
+                        'Software catalog with service ownership & dependency mapping',
+                        'Scaffolder with golden path templates — new microservice to production-ready repo in clicks',
+                        'Custom scaffolder actions: create GitHub repo, register in catalog, provision infrastructure & configure CI/CD automatically',
+                        'API documentation hub with OpenAPI/gRPC spec rendering',
+                        'CI/CD pipeline visibility across all services',
+                        'Tech docs site powered by TechDocs (MkDocs)',
+                        'Kubernetes & cloud resource visibility per service',
+                        'Custom scorecards for service maturity & compliance',
+                        'AI chat agent via Backstage MCP server — query services, owners, APIs & docs in natural language',
+                        'VS Code connects to Backstage MCP server — developers chat with their platform without leaving the editor',
+                      ].map((item, idx) => (
+                        <li key={idx} className="text-sm text-text-secondary flex items-start gap-2">
+                          <i className="fas fa-wrench text-yellow-400 text-xs mt-1"></i>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-bold text-yellow-400 uppercase tracking-wider mb-3">Target Outcomes</h4>
+                    <ul className="space-y-2">
+                      {[
+                        'Single portal for all developer needs — zero context switching',
+                        'New microservice from template to production in minutes',
+                        'Clear service ownership across the entire organization',
+                        'Automated API discovery and documentation',
+                        'Reduced onboarding time for new engineers',
+                        'Consistent service standards via golden path templates',
+                        'Full visibility into service health, deps & infrastructure',
+                        'Plugin ecosystem extensible to any internal tool',
+                        'AI-powered answers about any microservice — ownership, status, APIs — from VS Code',
+                      ].map((item, idx) => (
+                        <li key={idx} className="text-sm text-text-secondary flex items-start gap-2">
+                          <i className="fas fa-bullseye text-primary text-xs mt-1"></i>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  {['Backstage', 'React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Kubernetes', 'Microservices', 'Software Catalog', 'TechDocs', 'MCP Server', 'AI Agent', 'VS Code'].map((tag) => (
+                    <span key={tag} className="bg-white/5 text-text-secondary text-xs px-3 py-1 rounded-full border border-white/10">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-24 px-8">
         <div className="max-w-[800px] mx-auto text-center bg-gradient-to-br from-primary/5 to-secondary/5 border border-white/10 rounded-[30px] p-16 relative overflow-hidden">
