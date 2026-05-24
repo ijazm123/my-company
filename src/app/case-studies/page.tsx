@@ -379,6 +379,21 @@ export default function CaseStudiesPage() {
                       </div>
                     </div>
 
+                    {/* Full Architecture Diagram */}
+                    <div className="mb-8">
+                      <h4 className="text-xl font-bold mb-4">AI-Powered DevSecOps Platform (GitOps) with MCP</h4>
+                      <p className="text-text-secondary mb-4 text-sm">Complete platform architecture — runtime detection, AI remediation flow, Kubernetes cluster, CI/CD pipelines, monitoring stack, and shared services.</p>
+                      <button onClick={() => setLightboxImage({ src: '/case-studies/ai-devsecops-platform.png', alt: 'AI-Powered DevSecOps Platform (GitOps) with MCP - Full Architecture' })} className="block w-full text-left bg-bg-card rounded-xl border border-white/10 overflow-hidden hover:border-primary/30 transition-all duration-300 group">
+                        <Image
+                          src="/case-studies/ai-devsecops-platform.png"
+                          alt="AI-Powered DevSecOps Platform (GitOps) with MCP - Full Architecture"
+                          width={1200}
+                          height={900}
+                          className="w-full h-auto group-hover:scale-[1.01] transition-transform duration-300"
+                        />
+                      </button>
+                    </div>
+
                     {/* Platform in Action */}
                     <div className="mb-8">
                       <h4 className="text-xl font-bold mb-2">Platform in Action</h4>
@@ -689,20 +704,6 @@ export default function CaseStudiesPage() {
                         </div>
                       </div>
 
-                      {/* Full Architecture Diagram */}
-                      <div>
-                        <h4 className="text-xl font-bold mb-4">AI-Powered DevSecOps Platform (GitOps) with MCP</h4>
-                        <p className="text-text-secondary mb-4 text-sm">Complete platform architecture — runtime detection, AI remediation flow, Kubernetes cluster, CI/CD pipelines, monitoring stack, and shared services.</p>
-                        <button onClick={() => setLightboxImage({ src: '/case-studies/ai-devsecops-platform.png', alt: 'AI-Powered DevSecOps Platform (GitOps) with MCP - Full Architecture' })} className="block w-full text-left bg-bg-card rounded-xl border border-white/10 overflow-hidden hover:border-primary/30 transition-all duration-300 group">
-                          <Image
-                            src="/case-studies/ai-devsecops-platform.png"
-                            alt="AI-Powered DevSecOps Platform (GitOps) with MCP - Full Architecture"
-                            width={1200}
-                            height={900}
-                            className="w-full h-auto group-hover:scale-[1.01] transition-transform duration-300"
-                          />
-                        </button>
-                      </div>
                     </div>
                   </div>
                 )}
